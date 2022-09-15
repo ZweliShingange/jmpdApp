@@ -1,0 +1,12 @@
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\bin\Debug\net6.0\JmpdAppApi.DataAccess.deps.json
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\bin\Debug\net6.0\JmpdAppApi.DataAccess.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\bin\Debug\net6.0\JmpdAppApi.DataAccess.pdb
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.csproj.AssemblyReference.cache
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.AssemblyInfoInputs.cache
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.AssemblyInfo.cs
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.csproj.CoreCompileInputs.cache
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\refint\JmpdAppApi.DataAccess.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\JmpdAppApi.DataAccess.pdb
+C:\Private_repo\jmpdApp\JmpdAppApi.DataAccess\obj\Debug\net6.0\ref\JmpdAppApi.DataAccess.dll

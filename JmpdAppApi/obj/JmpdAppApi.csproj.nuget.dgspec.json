@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pet_project\\JmpdAppApi\\JmpdAppApi\\JmpdAppApi.csproj": {}
+    "C:\\Private_repo\\jmpdApp\\JmpdAppApi\\JmpdAppApi.csproj": {}
   },
   "projects": {
-    "C:\\Pet_project\\JmpdAppApi\\JmpdAppApi\\JmpdAppApi.csproj": {
+    "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pet_project\\JmpdAppApi\\JmpdAppApi\\JmpdAppApi.csproj",
-        "projectName": "JmpdAppApi",
-        "projectPath": "C:\\Pet_project\\JmpdAppApi\\JmpdAppApi\\JmpdAppApi.csproj",
+        "projectUniqueName": "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj",
+        "projectName": "JmpdAppApi.DataAccess",
+        "projectPath": "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj",
         "packagesPath": "C:\\Users\\shinz001\\.nuget\\packages\\",
-        "outputPath": "C:\\Pet_project\\JmpdAppApi\\JmpdAppApi\\obj\\",
+        "outputPath": "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shinz001\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,78 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Private_repo\\jmpdApp\\JmpdAppApi\\JmpdAppApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Private_repo\\jmpdApp\\JmpdAppApi\\JmpdAppApi.csproj",
+        "projectName": "JmpdAppApi",
+        "projectPath": "C:\\Private_repo\\jmpdApp\\JmpdAppApi\\JmpdAppApi.csproj",
+        "packagesPath": "C:\\Users\\shinz001\\.nuget\\packages\\",
+        "outputPath": "C:\\Private_repo\\jmpdApp\\JmpdAppApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\shinz001\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/vodapay-gateway/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj": {
+                "projectPath": "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
