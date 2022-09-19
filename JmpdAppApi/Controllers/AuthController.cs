@@ -1,3 +1,5 @@
+using JmpdAppApi.Common.Dto;
+using JmpdAppApi.DataAccess.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JmpdAppApi.Controllers
@@ -12,22 +14,20 @@ namespace JmpdAppApi.Controllers
     };
 
         private readonly ILogger<AuthController> _logger;
+        private readonly IAuthRepository authRepository;
 
-        public AuthController(ILogger<AuthController> logger)
+        public AuthController(ILogger<AuthController> logger, IAuthRepository authRepository)
         {
             _logger = logger;
+            this.authRepository = authRepository;
         }
 
         [HttpPost(Name = "SignIn")]
-        public IEnumerable<WeatherForecast> SignIn()
+        public IActionResult SignIn(string username, string password)
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            //addlogging
+            this.authRepository.GetUser(new off);
+            return Ok();
         }
     }
 }

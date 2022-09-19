@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "JmpdAppApi/1.0.0": {
         "dependencies": {
+          "JmpdAppApi.Common": "1.0.0",
           "JmpdAppApi.DataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
@@ -456,8 +457,14 @@
           }
         }
       },
+      "JmpdAppApi.Common/1.0.0": {
+        "runtime": {
+          "JmpdAppApi.Common.dll": {}
+        }
+      },
       "JmpdAppApi.DataAccess/1.0.0": {
         "dependencies": {
+          "JmpdAppApi.Common": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.8"
         },
         "runtime": {
@@ -793,6 +800,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "JmpdAppApi.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "JmpdAppApi.DataAccess/1.0.0": {
       "type": "project",

@@ -5,70 +5,70 @@ using Microsoft.EntityFrameworkCore;
 namespace JmpdAppApi
 {
 
-        public class Startup
+    public class Startup
+    {
+        public Startup(IHostEnvironment env, IWebHostEnvironment webHost, IConfiguration configuration)
         {
-            public Startup(IHostEnvironment env,IWebHostEnvironment webHost, IConfiguration configuration)
+            this.CurrentEnvironment = env;
+
+            this.Configuration = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .Build();
+
+            this.Configuration.Bind("AppSettings", new AppSettings());
+        }
+
+        public IConfiguration Configuration { get; }
+
+        public IHostEnvironment CurrentEnvironment { get; }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllers();
+
+            services.AddDbContextPool<IDatabaseContext, DatabaseContext>(
+                            options =>
+                            options.UseSqlServer(
+                                AppSettings.ConnectionString,
+                                opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
+
+            services.AddSwaggerGen(x => x.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
             {
-                this.CurrentEnvironment = env;
+                Title = "JmpdAppApi",
+                Version = "v.1"
+            }));
 
-                this.Configuration = new ConfigurationBuilder()
-                    .SetBasePath(env.ContentRootPath)
-                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                    .Build();
+            services.AddHealthChecks();
+        }
 
-                this.Configuration.Bind("AppSettings", new AppSettings());
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
             }
 
-            public IConfiguration Configuration { get; }
+            app.UseHealthChecks("/hc");
 
-            public IHostEnvironment CurrentEnvironment { get; }
+            app.UseHttpsRedirection();
 
-            public void ConfigureServices(IServiceCollection services)
-            {
-                services.AddControllers();
+            app.UseRouting();
 
-                services.AddDbContextPool<IDatabaseContext,DatabaseContext>(
-                                options =>
-                                options.UseSqlServer(
-                                    AppSettings.ConnectionString,
-                                    opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
-
-                services.AddSwaggerGen(x => x.SwaggerDoc("v1",new Microsoft.OpenApi.Models.OpenApiInfo 
-                {
-                    Title="JmpdAppApi",
-                    Version = "v.1"
-                }));
-
-                services.AddHealthChecks();
-            }
-
-            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-            {
-                if (env.IsDevelopment())
-                {
-                    app.UseDeveloperExceptionPage();
-                }
-
-                app.UseHealthChecks("/hc");
-
-                app.UseHttpsRedirection();
-
-                app.UseRouting();
-
-                app.UseAuthorization();
+            app.UseAuthorization();
 
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
 
-            c.SwaggerEndpoint("../swagger/v1/swagger.json","JmpdAppApi")
+            c.SwaggerEndpoint("../swagger/v1/swagger.json", "JmpdAppApi")
             );
 
 
-                app.UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllers();
-                });
-            }
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
+}

@@ -198,6 +198,9 @@
       "JmpdAppApi.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "JmpdAppApi.DataAccess": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/JmpdAppApi.Common.dll": {}
         },

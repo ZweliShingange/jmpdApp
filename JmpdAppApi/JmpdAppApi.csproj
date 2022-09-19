@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JmpdAppApi.Common\JmpdAppApi.Common.csproj" />
     <ProjectReference Include="..\JmpdAppApi.DataAccess\JmpdAppApi.DataAccess.csproj" />
   </ItemGroup>
 

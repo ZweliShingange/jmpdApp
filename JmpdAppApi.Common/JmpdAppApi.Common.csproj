@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JmpdAppApi.DataAccess\JmpdAppApi.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,17 @@
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.Core.deps.json
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.Core.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.Core.pdb
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.Common.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.DataAccess.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.Common.pdb
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\bin\Debug\net6.0\JmpdAppApi.DataAccess.pdb
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.csproj.AssemblyReference.cache
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.AssemblyInfoInputs.cache
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.AssemblyInfo.cs
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.csproj.CoreCompileInputs.cache
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.csproj.CopyComplete
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\refint\JmpdAppApi.Core.dll
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\JmpdAppApi.Core.pdb
+C:\Private_repo\jmpdApp\JmpdAppApi.Core\obj\Debug\net6.0\ref\JmpdAppApi.Core.dll

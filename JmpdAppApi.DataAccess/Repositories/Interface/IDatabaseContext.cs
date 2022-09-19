@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JmpdAppApi.DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
+using JmpdAppApi.DataAccess.Models;
 
 namespace JmpdAppApi.DataAccess.Repositories.Interface
 {
-    public interface IDBContext
+    public interface IDatabaseContext
     {
+        DbSet<TrafficOfficial> TrafficOfficials { get; set; }
+         DbSet<Gender> Genders { get; set; }
+
+        DbSet<Role> Roles { get; set; }
+
+        DbSet<Title> Titles { get; set; }
     }
 }

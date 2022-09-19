@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj": {
+                "projectPath": "C:\\Private_repo\\jmpdApp\\JmpdAppApi.DataAccess\\JmpdAppApi.DataAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
