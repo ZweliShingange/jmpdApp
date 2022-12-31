@@ -1,4 +1,7 @@
-﻿using JmpdAppApi.DataAccess;
+﻿using JmpdAppApi.Core.Services;
+using JmpdAppApi.Core.Services.IServices;
+using JmpdAppApi.DataAccess;
+using JmpdAppApi.DataAccess.Repositories;
 using JmpdAppApi.DataAccess.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +19,7 @@ namespace JmpdAppApi
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
 
-            this.Configuration.Bind("AppSettings", new AppSettings());
+            this.Configuration.Bind("Settings", new AppSettings());
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +29,9 @@ namespace JmpdAppApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddTransient<IAuthenticationService, AuthenticationService>();
+            services.AddTransient<IAuthRepository, AuthRepository>();
 
             services.AddDbContextPool<IDatabaseContext, DatabaseContext>(
                             options =>

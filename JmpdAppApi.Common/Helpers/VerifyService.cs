@@ -5,15 +5,15 @@ namespace JmpdAppApi.Common.Helpers
 {
     public static class VerifyService
     {
-        public static  VerifyUserPassword(string trafficOfficialPassword, string officialSignInPassword)
+        public static bool VerifyUserPassword(TrafficOfficial trafficOfficial, string officialSignInPassword)
         {
-            if (VerifyPassword(trafficOfficialPassword,officialSignInPassword))
+            if (VerifyPassword(trafficOfficial.Password,officialSignInPassword))
             {
-                return Result<LoggedInOfficialDto>.Success(offi);
+                return true;
             }
             else 
             {
-                return Result<LoggedInOfficialDto>.Failure("Password is incorrect");
+                return false;
             }
         }
 

@@ -12,9 +12,9 @@ namespace JmpdAppApi.Common.Dto
 
         public string Name { get; set; }
 
-        public int RoleId { get; set; }
+        public string RoleName { get; set; }
 
-        public int ProvinceId { get; set; }
+        public string ProvinceName { get; set; }
 
     }
 }

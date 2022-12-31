@@ -1,4 +1,5 @@
 using JmpdAppApi.Common.Dto;
+using JmpdAppApi.Core.Services.IServices;
 using JmpdAppApi.DataAccess.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,26 +9,24 @@ namespace JmpdAppApi.Controllers
     [Route("[controller]")]
     public class AuthController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
         private readonly ILogger<AuthController> _logger;
-        private readonly IAuthRepository authRepository;
+        private readonly IAuthenticationService authenticationService;
 
-        public AuthController(ILogger<AuthController> logger, IAuthRepository authRepository)
+        public AuthController(ILogger<AuthController> logger, IAuthenticationService authenticationService)
         {
             _logger = logger;
-            this.authRepository = authRepository;
+            this.authenticationService = authenticationService;
         }
 
         [HttpPost(Name = "SignIn")]
         public IActionResult SignIn(string username, string password)
         {
             //addlogging
-            this.authRepository.GetUser(new off);
-            return Ok();
+            return Ok(this.authenticationService.SignIn(new OfficialSignInDto
+            {
+                Username = username,
+                Password = password
+            }));
         }
     }
 }

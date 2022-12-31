@@ -5,6 +5,6 @@ namespace JmpdAppApi.Core.Services.IServices
 {
     public interface IAuthenticationService
     {
-        Result SignInOfficial(OfficialSignInDto user);
+         Result<LoggedInOfficialDto> SignIn(OfficialSignInDto user);
     }
 }

@@ -1,8 +1,10 @@
 ﻿using JmpdAppApi.Common;
 using JmpdAppApi.Common.Dto;
 using JmpdAppApi.Common.Helpers;
+using JmpdAppApi.Common.Mappers;
 using JmpdAppApi.Core.Services.IServices;
 using JmpdAppApi.DataAccess.Repositories.Interface;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace JmpdAppApi.Core.Services
 {
@@ -15,7 +17,7 @@ namespace JmpdAppApi.Core.Services
             this.authRepository = authRepository;
         }
 
-        public Result SignInOfficial(OfficialSignInDto userOfficial)
+        public Result<LoggedInOfficialDto> SignIn(OfficialSignInDto userOfficial)
         {
             try
             {
@@ -23,17 +25,24 @@ namespace JmpdAppApi.Core.Services
 
                 if (user != null)
                 {
-                     return VerifyService.VerifyUserPassword(user, userOfficial);
+                    if (VerifyService.VerifyUserPassword(user, userOfficial.Password))
+                    {
+                        return Result<LoggedInOfficialDto>.Success(Mapper.MapToLoggedInOfficial(user));
+                    }
+                    else
+                    {
+                        throw new Exception("Incorrect Passsword");
+                    }
                 }
                 else 
                 {
-                    return Result<LoggedInOfficialDto>.Failure("No user found or username is incorrect");
+                    throw  new Exception("No user found or username is incorrect");
                 }
 
             }
             catch (Exception ex)
             {
-                return Result.Failure(ex.Message);
+                return Result<LoggedInOfficialDto>.Failure(ex.Message);
             }
         }
     }
